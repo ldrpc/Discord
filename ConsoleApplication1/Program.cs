@@ -68,24 +68,18 @@ namespace ConsoleApplication1
         {
             try
             {
-                // create the ProcessStartInfo using "cmd" as the program to be run,
-                // and "/c " as the parameters.
-                // Incidentally, /c tells cmd that we want it to execute the command that follows,
-                // and then exit.
+             
                 System.Diagnostics.ProcessStartInfo procStartInfo =
                 new System.Diagnostics.ProcessStartInfo("cmd", "/k " + command);
 
-                // The following commands are needed to redirect the standard output.
-                // This means that it will be redirected to the Process.StandardOutput StreamReader.
-                // Do not create the black window.
-                // don't execute on shell
+             
                 procStartInfo.UseShellExecute = false;
                 procStartInfo.CreateNoWindow = true;
                 procStartInfo.RedirectStandardOutput = true;
                 procStartInfo.RedirectStandardError = true;
-                // don't show window
+          
                 procStartInfo.WindowStyle = ProcessWindowStyle.Minimized;
-                // Now we create a process, assign its ProcessStartInfo and start it
+        
                 proc = new System.Diagnostics.Process();
                 proc.StartInfo = procStartInfo;
 
