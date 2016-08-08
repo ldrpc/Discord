@@ -35,4 +35,4 @@ bot.on("message", function (message) {
     }
 });
 
-bot.login("luisdanielrodas@hotmail.com", "salami");
+bot.login("luisdanielrodas@hotmail.com", "");
